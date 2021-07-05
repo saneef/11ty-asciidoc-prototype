@@ -1,8 +1,10 @@
 const asciidoctor = require("asciidoctor")();
+
 module.exports = function (config) {
-  config.addExtension("adoc", function (path, contents) {
-    console.log("🔨");
-    return asciidoctor.convert(contents);
+  config.addTemplateFormats("adoc");
+  config.addExtension("adoc", {
+    read: true,
+    compile: (contents) => () => asciidoctor.convert(contents),
   });
 
   return {
