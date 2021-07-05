@@ -1,0 +1,16 @@
+{
+  "name": "11ty-asciidoc-prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Saneef Ansari <hello@saneef.com> (https://saneef.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.0-canary.38",
+    "asciidoctor": "^2.2.4"
+  }
+}
