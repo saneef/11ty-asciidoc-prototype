@@ -1,11 +1,9 @@
-const asciidoctor = require("asciidoctor")();
+const asciidoctor = require("./eleventy/eleventy-asciidoctor.js");
 
 module.exports = function (config) {
+  // Add support for Asciidoc
   config.addTemplateFormats("adoc");
-  config.addExtension("adoc", {
-    read: true,
-    compile: (contents) => () => asciidoctor.convert(contents),
-  });
+  config.addExtension("adoc", asciidoctor());
 
   return {
     dir: {

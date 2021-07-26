@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ELEVENTY_EXPERIMENTAL=true eleventy --quiet --serve",
+    "build": "ELEVENTY_EXPERIMENTAL=true eleventy --quiet"
   },
   "keywords": [],
   "author": "Saneef Ansari <hello@saneef.com> (https://saneef.com/)",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^1.0.0-canary.38",
-    "asciidoctor": "^2.2.4"
+    "asciidoctor": "^2.2.4",
+    "highlight.js": "^11.1.0"
   }
 }
